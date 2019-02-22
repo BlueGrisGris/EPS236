@@ -5,7 +5,7 @@
 # Slowest exchange into the stratopshere, next slowest across the equator
 
 ## The advection and exchange parameters
-k21 = k34= 2 
+k21 = k34 = 2 
 k23 = k32 = .2 
 k25 = k35 = k54 = k51 = .02  
 # yr-1   
