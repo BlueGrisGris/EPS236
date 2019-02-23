@@ -8,7 +8,7 @@
 k21 = k34 = 2 
 k23 = k32 = .2 
 k25 = k35 = k54 = k51 = .02  
-# yr-1   
+# yr-1
 
 k12 = k21 + k51
 k43 = k34 + k54
@@ -58,12 +58,23 @@ delt=.01
 
 ##   tt is the time vector for the problem
 tt=seq(0,100,delt) ## note "feature", seq produces a single precision result //all other R fcns double (!)
-c0=c(1,0,0,0,0) ## an initial condition -> age spectrum of box 1
+
+c0 <- c(1,0,0,0,0) ## an initial condition -> age spectrum of box 1
+c1 <- c(0,1,0,0,0)
+c2 <- c(0,0,1,0,0)
+c3 <- c(0,0,0,1,0)
+c4 <- c(0,0,0,0,1)
 
 
 ## solve the problem by integrating the 1st order differential equation (warning -- result may be biased...)
 int.results=matrix(0, nrow=10001, ncol=5)
 
 int.results[1,]=c0
+
+
+
+
+
+
 
 
