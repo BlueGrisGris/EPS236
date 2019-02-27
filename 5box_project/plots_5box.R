@@ -174,16 +174,6 @@ print(sys.error.teo.int.plot)
 
 
 
-
-
-
-
-
-
-
-
-
-
 ####### plot teo.results1 ##########
 teo.results1.plotable <- data.frame(tt, teo.results1) 
 colnames(teo.results1.plotable) <- c("time" , 
@@ -523,6 +513,9 @@ inverse.results.plot <- ggplot(data = inverse.results.plotable,
   geom_point(data = filter(inverse.results.plotable, box == "box.4"), aes(y = ct), color = "green", size = .5 ) + 
   geom_point(data = filter(inverse.results.plotable, box == "box.5"), aes(y = ct), color = "grey", size = .5 ) + 
   
+  geom_point(data = intercept.ct.1, aes(x = time, y = ct) ) +
+
+  
   xlim(0, 5) +
   ylim(0, 1) +
   
@@ -532,11 +525,11 @@ inverse.results.plot <- ggplot(data = inverse.results.plotable,
   scale_color_viridis_c() + 
   # theme_ethan()+
   # geom_text_repel(aes(label = type))+
-  labs(x= "time" ,
+  labs(x= "-time" ,
        y= "ct") + 
   
   
-  ggtitle("Superposition Time Evolution Operator Model") 
+  ggtitle("Inverse Time Evolution Operator Model") 
 
 #geom_text_repel(aes(label = mean.perc.bb, size = 11) )  # turned off bc I cant control how many
 # sigfigs the labels display
