@@ -58,7 +58,10 @@ delt=.01
 
 ##   tt is the time vector for the problem
 tt=seq(0,100,delt) ## note "feature", seq produces a single precision result //all other R fcns double (!)
-
+tt2 <-seq(0,20,delt)
+tt3 <-seq(0,6,delt)
+  
+  
 c0 <- c(1,0,0,0,0) ## an initial condition -> age spectrum of box 1
 c1 <- c(0,1,0,0,0)
 c2 <- c(0,0,1,0,0)
